@@ -2,8 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
-const ProductDetail = ({ productId }) => {
+const ProductDetail = () => {
+  const { id } = useParams(); // Access the 'id' parameter from the URL
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,7 +14,7 @@ const ProductDetail = ({ productId }) => {
     setLoading(true);
     setError(null);
 
-    axios.get(`https://fakestoreapi.com/products/${productId}`)
+    axios.get(`https://fakestoreapi.com/products/${id}`)
       .then(response => {
         setProduct(response.data);
         setLoading(false);
@@ -21,7 +23,7 @@ const ProductDetail = ({ productId }) => {
         setError(error.message);
         setLoading(false);
       });
-  }, [productId]);
+  }, [id]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -47,3 +49,4 @@ const ProductDetail = ({ productId }) => {
 };
 
 export default ProductDetail;
+

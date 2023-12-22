@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import CategoryList from './components/CategoryList';
 import ProductList from './components/ProductList';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ProductDetail from './components/ProductDetail.js';
+import ProductDetail from './components/ProductDetail';
 
 
 const App = () => {
@@ -38,6 +38,10 @@ export default App;
 
 
 
-
+//w1
 //Netlify URL
 //https://65786fbea104856f052cd9a8--kaleidoscopic-crumble-d382ff.netlify.app/
+
+//w2
+//Netlify URL
+//https://658571b13098fab6efd5c02f--tangerine-biscuit-d585bf.netlify.app/products/9
