@@ -1,20 +1,22 @@
 // CategoryList.js
 import React from 'react';
-import allCategories from '../fake-data/all-categories';
+import allCategories from '../fake-data/all-categories.js';
 
 const CategoryList = ({ selectCategory }) => {
   return (
     <div>
       <h2>Categories</h2>
-      <ul>
+      <div className="category-buttons">
         {allCategories.map(category => (
-          <li key={category} onClick={() => selectCategory(category)}>
-            {category}
-          </li>
+          <button key={category} onClick={() => selectCategory(category.replace('FAKE: ', ''))}>
+            {category.replace('FAKE: ', '')}
+          </button>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
 
 export default CategoryList;
+
+

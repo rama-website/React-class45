@@ -1,12 +1,14 @@
 // ProductList.js
-import '../index.css';
 import React from 'react';
 import allProducts from '../fake-data/all-products';
 
 const ProductList = ({ selectedCategory }) => {
-  // Filter products based on the selected category
+  
+
   const filteredProducts = selectedCategory
-    ? allProducts.filter(product => product.category === selectedCategory)
+    ? allProducts.filter(
+        product => product.category.toLowerCase()=== selectedCategory
+      )
     : allProducts;
 
   return (
@@ -18,7 +20,7 @@ const ProductList = ({ selectedCategory }) => {
             <img src={product.image} alt={product.title} className="product-image" />
             <h3>{product.title}</h3>
             <p>Price: ${product.price}</p>
-            {/* Display other product details */}
+            {/* Add other product details as needed */}
           </li>
         ))}
       </ul>
@@ -27,3 +29,5 @@ const ProductList = ({ selectedCategory }) => {
 };
 
 export default ProductList;
+
+
