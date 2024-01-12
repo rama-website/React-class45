@@ -54,7 +54,7 @@ const Favourites = () => {
             <h3>{product.title}</h3>
             <img src={product.image} alt={product.title} />
             <p>Price: ${product.price}</p>
-            {/* Display other product details if needed */}
+            
           </li>
         ))}
       </ul>
