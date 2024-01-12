@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { FavoritesContext } from './context/FavoritesContext';
-import axios from 'axios';
+import axios from 'axios'
 
 const Favourites = () => {
   const { favorites } = useContext(FavoritesContext);

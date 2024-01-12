@@ -1,7 +1,7 @@
 // ProductList.js
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom'; 
 import { FavoritesContext } from './context/FavoritesContext';
 import heartRegularIcon from '../assets/heart-regular.svg';
 import heartSolidIcon from '../assets/heart-solid.svg';
