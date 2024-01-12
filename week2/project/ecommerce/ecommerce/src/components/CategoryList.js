@@ -35,8 +35,8 @@ const CategoryList = ({ onSelectCategory }) => {
     <div>
       <h2>Categories</h2>
       <ul>
-        {categories.map(category => (
-          <li key={category} onClick={() => handleCategoryClick(category)}>
+        {categories.map((category, index) => (
+          <li key={index} onClick={() => handleCategoryClick(category)}>
             {category}
           </li>
         ))}
